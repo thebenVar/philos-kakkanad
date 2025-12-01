@@ -64,6 +64,61 @@
             font-family: 'Bebas Neue', cursive;
             letter-spacing: 2px;
         }
+
+        /* Sticky Menu Nav */
+        .menu-nav {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-nav-item {
+            transition: all 0.3s ease;
+        }
+
+        .menu-nav-item.active {
+            background-color: #ea580c;
+            color: white;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 150px;
+        }
+
+        /* Search highlight */
+        .hidden-item {
+            display: none !important;
+        }
+
+        .highlight {
+            background-color: #fed7aa;
+            animation: highlight-fade 2s ease-out;
+        }
+
+        @keyframes highlight-fade {
+            from { background-color: #fed7aa; }
+            to { background-color: transparent; }
+        }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 
@@ -76,9 +131,9 @@
                 class="h-24 md:h-32 w-auto drop-shadow-2xl bg-gray-800 rounded-full p-1 transition transform hover:scale-105">
         </div>
         <div class="hidden md:flex space-x-6 font-semibold tracking-wide text-sm">
-            <a href="#" class="hover:text-orange-400 transition">MENU</a>
-            <a href="#" class="hover:text-orange-400 transition">OFFERS</a>
-            <a href="#" class="hover:text-orange-400 transition">CONTACT</a>
+            <a href="#menu" class="hover:text-orange-400 transition">MENU</a>
+            <a href="#offers" class="hover:text-orange-400 transition">OFFERS</a>
+            <a href="#footer" class="hover:text-orange-400 transition">CONTACT</a>
         </div>
         <div class="flex space-x-3">
             <a href="https://wa.me/918891655177" target="_blank"
@@ -124,10 +179,10 @@
                         class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded font-bold text-lg transition shadow-xl hover:-translate-y-1">
                         ORDER ONLINE
                     </button>
-                    <button
-                        class="border-2 border-white hover:bg-white hover:text-stone-900 text-white px-8 py-4 rounded font-bold text-lg transition">
+                    <a href="#menu"
+                        class="border-2 border-white hover:bg-white hover:text-stone-900 text-white px-8 py-4 rounded font-bold text-lg transition text-center">
                         VIEW MENU
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -149,9 +204,61 @@
                 <p class="mt-4 text-stone-600">Explore our authentic wood-fired creations.</p>
             </div>
 
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" id="menuSearch" placeholder="Search menu items..." 
+                        class="w-full px-6 py-4 pl-12 text-lg border-2 border-stone-300 rounded-full focus:border-orange-500 focus:outline-none shadow-sm">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-stone-400 text-xl"></i>
+                </div>
+                <p class="text-sm text-stone-500 mt-2 text-center" id="searchResults"></p>
+            </div>
+
+            <!-- Sticky Category Navigation -->
+            <div class="menu-nav mb-8 -mx-6 px-6 py-4">
+                <div class="flex overflow-x-auto space-x-2 pb-2 scrollbar-hide">
+                    <button onclick="scrollToCategory('mocktails')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍹 Mocktails
+                    </button>
+                    <button onclick="scrollToCategory('starters')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🥟 Starters
+                    </button>
+                    <button onclick="scrollToCategory('wraps')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🌯 Wraps & Pastas
+                    </button>
+                    <button onclick="scrollToCategory('sushi')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍣 Sushi
+                    </button>
+                    <button onclick="scrollToCategory('ramen')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍜 Ramen
+                    </button>
+                    <button onclick="scrollToCategory('mains')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍛 Mains
+                    </button>
+                    <button onclick="scrollToCategory('sides')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍟 Sides
+                    </button>
+                    <button onclick="scrollToCategory('pizzas')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        🍕 Pizzas
+                    </button>
+                    <button onclick="scrollToCategory('toppings')" 
+                        class="menu-nav-item px-4 py-2 rounded-full bg-stone-200 hover:bg-orange-500 hover:text-white whitespace-nowrap font-semibold text-sm transition">
+                        ➕ Toppings
+                    </button>
+                </div>
+            </div>
+
             <div class="space-y-16">
 
-                <div class="mb-12">
+                <div class="mb-12" id="mocktails">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">MOCKTAIL BAR
                     </h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -274,7 +381,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="starters">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">STARTERS</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
 
@@ -395,7 +502,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="wraps">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">WRAP & PASTAS
                     </h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -457,7 +564,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="sushi">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">JAPANESE SUSHI
                         BAR</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -547,7 +654,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="ramen">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">SIGNATURE
                         RAMEN BOWLS</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -566,7 +673,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="mains">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">MAINS</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
 
@@ -616,7 +723,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="sides">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">SIDES</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
 
@@ -663,7 +770,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="pizzas">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">WOOD FIRED
                         PIZZAS</h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -960,7 +1067,7 @@
                     </div>
                 </div>
 
-                <div class="mb-12">
+                <div class="mb-12" id="toppings">
                     <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2">EXTRA TOPPINGS
                     </h3>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -1054,7 +1161,7 @@
 
 
     <!-- Visual Offer Strip -->
-    <section class="py-12 bg-orange-600 text-white">
+    <section id="offers" class="py-12 bg-orange-600 text-white">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center mb-6 md:mb-0">
                 <i class="fas fa-motorcycle text-5xl mr-6"></i>
@@ -1156,9 +1263,120 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()" 
+        class="bg-orange-600 hover:bg-orange-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition transform hover:scale-110">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
     <!-- Gemini AI Script -->
     <script>
         const apiKey = ""; // Provided by environment
+
+        // Menu Navigation & Search Functions
+        function scrollToCategory(categoryId) {
+            const element = document.getElementById(categoryId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Update active state
+                document.querySelectorAll('.menu-nav-item').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                event.target.classList.add('active');
+            }
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('menuSearch');
+        const searchResults = document.getElementById('searchResults');
+        let searchTimeout;
+
+        searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                const menuItems = document.querySelectorAll('#menu .flex.justify-between.items-start');
+                let visibleCount = 0;
+                
+                if (searchTerm === '') {
+                    // Show all items
+                    menuItems.forEach(item => {
+                        item.classList.remove('hidden-item', 'highlight');
+                    });
+                    searchResults.textContent = '';
+                    return;
+                }
+                
+                menuItems.forEach(item => {
+                    const title = item.querySelector('h4')?.textContent.toLowerCase() || '';
+                    const description = item.querySelector('p')?.textContent.toLowerCase() || '';
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        item.classList.remove('hidden-item');
+                        item.classList.add('highlight');
+                        visibleCount++;
+                    } else {
+                        item.classList.add('hidden-item');
+                        item.classList.remove('highlight');
+                    }
+                });
+                
+                searchResults.textContent = visibleCount > 0 
+                    ? `Found ${visibleCount} item${visibleCount !== 1 ? 's' : ''}` 
+                    : 'No items found';
+            }, 300);
+        });
+
+        // Intersection Observer for active category highlighting
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const categoryId = entry.target.id;
+                    document.querySelectorAll('.menu-nav-item').forEach((btn, index) => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    const categories = ['mocktails', 'starters', 'wraps', 'sushi', 'ramen', 'mains', 'sides', 'pizzas', 'toppings'];
+                    const activeIndex = categories.indexOf(categoryId);
+                    if (activeIndex !== -1) {
+                        const buttons = document.querySelectorAll('.menu-nav-item');
+                        if (buttons[activeIndex]) {
+                            buttons[activeIndex].classList.add('active');
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all menu sections
+        document.addEventListener('DOMContentLoaded', () => {
+            ['mocktails', 'starters', 'wraps', 'sushi', 'ramen', 'mains', 'sides', 'pizzas', 'toppings'].forEach(id => {
+                const element = document.getElementById(id);
+                if (element) observer.observe(element);
+            });
+        });
+
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
         function openOrderModal() {
             document.getElementById('orderModal').classList.remove('hidden');
@@ -1222,7 +1440,7 @@
         }
     </script>
     <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+    <footer id="footer" class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-2">
                 <h4 class="text-white text-3xl font-bold logo-font mb-4">PHILOS DELICACY</h4>
