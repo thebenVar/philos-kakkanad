@@ -2,3 +2,10 @@
 *.zip
 *.pdf
 *.docx
+*.py
+menu_output.html
+PHILOS KKND MENU AUGUST.htm
+PHILOS KKND MENU AUGUST_files/
+PHILOS KKND MENU AUGUST.pdf
+.gitignore
+menu*.png
