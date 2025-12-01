@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philos Delicacy - Artisan Pizza Flyer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Lato', sans-serif;
         }
-        h1, h2, h3, .serif {
+
+        h1,
+        h2,
+        h3,
+        .serif {
             font-family: 'Playfair Display', serif;
         }
+
         .pizza-shadow {
-            filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
+            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
         }
+
         .bg-pattern {
             background-color: #1a1a1a;
             background-image: radial-gradient(#333 1px, transparent 1px);
             background-size: 20px 20px;
         }
+
         .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+
         /* Loading Spinner */
         .loader {
             border: 3px solid #f3f3f3;
@@ -32,15 +43,23 @@
             border-top: 3px solid #ea580c;
             width: 24px;
             height: 24px;
-            -webkit-animation: spin 1s linear infinite; /* Safari */
+            -webkit-animation: spin 1s linear infinite;
+            /* Safari */
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body class="bg-stone-50 text-stone-800">
 
     <!-- Header / Nav -->
@@ -51,7 +70,8 @@
             <a href="#" class="hover:text-orange-400 transition">OFFERS</a>
             <a href="#" class="hover:text-orange-400 transition">CONTACT</a>
         </div>
-        <button class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-bold transition shadow-lg transform hover:scale-105">
+        <button
+            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-bold transition shadow-lg transform hover:scale-105">
             <i class="fas fa-phone-alt mr-2"></i> CALL NOW
         </button>
     </nav>
@@ -60,17 +80,18 @@
     <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-stone-900">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop" 
-                 alt="Rustic Pizza Background" 
-                 class="w-full h-full object-cover opacity-40">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop"
+                alt="Rustic Pizza Background" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-stone-900/80"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
-            
+        <div
+            class="relative z-10 container mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+
             <!-- Hero Text -->
             <div class="space-y-6">
-                <span class="inline-block bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded tracking-widest uppercase mb-2">
+                <span
+                    class="inline-block bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded tracking-widest uppercase mb-2">
                     Near Infopark Kakkanad
                 </span>
                 <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight text-shadow">
@@ -78,283 +99,564 @@
                     <span class="italic text-orange-500">Wood-Fired</span> <br>
                     Experience
                 </h1>
-                <p class="text-lg text-stone-200 max-w-lg mx-auto md:mx-0 font-light">
-                    Hand-tossed dough, San Marzano tomato sauce, and locally sourced artisan toppings. Taste the difference today.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded font-bold text-lg transition shadow-xl hover:-translate-y-1">
-                        ORDER ONLINE
-                    </button>
-                    <button class="border-2 border-white hover:bg-white hover:text-stone-900 text-white px-8 py-4 rounded font-bold text-lg transition">
-                        VIEW MENU
-                    </button>
-                </div>
-            </div>
+                <!DOCTYPE html>
+                <html lang="en">
 
-            <!-- Hero Image (Floating Pizza) -->
-            <div class="hidden md:block relative">
-                <div class="absolute inset-0 bg-orange-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop" 
-                     alt="Delicious Margherita Pizza" 
-                     class="relative w-full max-w-lg mx-auto pizza-shadow rotate-12 hover:rotate-0 transition duration-700 ease-out transform hover:scale-105 rounded-full aspect-square object-cover border-4 border-white/10">
-            </div>
-        </div>
-    </header>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Philos Delicacy - Artisan Pizza Flyer</title>
+                    <script src="https://cdn.tailwindcss.com"></script>
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                        rel="stylesheet">
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+                        rel="stylesheet">
+                    <style>
+                        body {
+                            font-family: 'Lato', sans-serif;
+                        }
 
-    <!-- Pricing Strategy / Tiers Section -->
-    <section class="py-20 bg-stone-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-stone-900 mb-4">Choose Your Tier</h2>
-                <div class="w-24 h-1 bg-orange-500 mx-auto rounded"></div>
-                <p class="mt-4 text-stone-600">Curated selections for every appetite near Infopark.</p>
-            </div>
+                        h1,
+                        h2,
+                        h3,
+                        .serif {
+                            font-family: 'Playfair Display', serif;
+                        }
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
-                <!-- Tier 1: Value -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-3 py-1 m-4 rounded z-10">BUDGET</div>
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Classic Pizza">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">The Classic</h3>
-                        <p class="text-stone-500 text-sm mb-6">Perfect for a quick lunch break.</p>
-                        <ul class="space-y-3 mb-8 text-stone-600">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 9" Hand-tossed Base</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 2 Toppings Max</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Free Soft Drink</li>
-                        </ul>
-                        <div class="flex justify-between items-center border-t pt-6">
-                            <span class="text-3xl font-bold text-stone-800">₹299</span>
-                            <button class="text-orange-600 font-bold hover:text-orange-700">SELECT <i class="fas fa-arrow-right ml-1"></i></button>
+                        .pizza-shadow {
+                            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+                        }
+
+                        .bg-pattern {
+                            background-color: #1a1a1a;
+                            background-image: radial-gradient(#333 1px, transparent 1px);
+                            background-size: 20px 20px;
+                        }
+
+                        .text-shadow {
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                        }
+
+                        /* Loading Spinner */
+                        .loader {
+                            border: 3px solid #f3f3f3;
+                            border-radius: 50%;
+                            border-top: 3px solid #ea580c;
+                            width: 24px;
+                            height: 24px;
+                            -webkit-animation: spin 1s linear infinite;
+                            /* Safari */
+                            animation: spin 1s linear infinite;
+                        }
+
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    </style>
+                </head>
+
+                <body class="bg-stone-50 text-stone-800">
+
+                    <!-- Header / Nav -->
+                    <nav class="absolute top-0 w-full z-20 p-6 flex justify-between items-center text-white">
+                        <div class="text-2xl font-bold tracking-widest serif">PHILOS DELICACY</div>
+                        <div class="hidden md:flex space-x-6 font-semibold tracking-wide text-sm">
+                            <a href="#" class="hover:text-orange-400 transition">MENU</a>
+                            <a href="#" class="hover:text-orange-400 transition">OFFERS</a>
+                            <a href="#" class="hover:text-orange-400 transition">CONTACT</a>
+                        </div>
+                        <button
+                            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-bold transition shadow-lg transform hover:scale-105">
+                            <i class="fas fa-phone-alt mr-2"></i> CALL NOW
+                        </button>
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <header
+                        class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-stone-900">
+                        <!-- Background Image with Overlay -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop"
+                                alt="Rustic Pizza Background" class="w-full h-full object-cover opacity-40">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-stone-900/80">
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative z-10 container mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+
+                            <!-- Hero Text -->
+                            <div class="space-y-6">
+                                <span
+                                    class="inline-block bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded tracking-widest uppercase mb-2">
+                                    Near Infopark Kakkanad
+                                </span>
+                                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight text-shadow">
+                                    Authentic <br>
+                                    <span class="italic text-orange-500">Wood-Fired</span> <br>
+                                    Experience
+                                </h1>
+                                <p class="text-lg text-stone-200 max-w-lg mx-auto md:mx-0 font-light">
+                                    Hand-tossed dough, San Marzano tomato sauce, and locally sourced artisan toppings.
+                                    Taste the
+                                    difference today.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                                    <button onclick="openOrderModal()"
+                                        class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded font-bold text-lg transition shadow-xl hover:-translate-y-1">
+                                        ORDER ONLINE
+                                    </button>
+                                    <button
+                                        class="border-2 border-white hover:bg-white hover:text-stone-900 text-white px-8 py-4 rounded font-bold text-lg transition">
+                                        VIEW MENU
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Hero Image (Floating Pizza) -->
+                            <div class="hidden md:block relative">
+                                <div
+                                    class="absolute inset-0 bg-orange-500 rounded-full blur-3xl opacity-20 animate-pulse">
+                                </div>
+                                <img src="assets/hero-pizza.png" alt="Delicious Margherita Pizza"
+                                    class="relative w-full max-w-2xl mx-auto pizza-shadow rotate-12 hover:rotate-0 transition duration-700 ease-out transform hover:scale-105 rounded-full aspect-square object-cover border-4 border-white/10">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Pricing Strategy / Tiers Section -->
+                    <section class="py-20 bg-stone-50">
+                        <div class="container mx-auto px-6">
+                            <div class="text-center mb-16">
+                                <h2 class="text-4xl font-bold text-stone-900 mb-4">Choose Your Tier</h2>
+                                <div class="w-24 h-1 bg-orange-500 mx-auto rounded"></div>
+                                <p class="mt-4 text-stone-600">Curated selections for every appetite near Infopark.</p>
+                            </div>
+
+                            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                                <!-- Tier 1: Value -->
+                                <div
+                                    class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                                    <div class="h-48 overflow-hidden relative">
+                                        <div
+                                            class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-3 py-1 m-4 rounded z-10">
+                                            BUDGET</div>
+                                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                            alt="Classic Pizza">
+                                    </div>
+                                    <div class="p-8">
+                                        <h3 class="text-2xl font-bold mb-2">The Classic</h3>
+                                        <p class="text-stone-500 text-sm mb-6">Perfect for a quick lunch break.</p>
+                                        <ul class="space-y-3 mb-8 text-stone-600">
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> 9"
+                                                Hand-tossed Base</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> 2 Toppings
+                                                Max</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> Free Soft
+                                                Drink</li>
+                                        </ul>
+                                        <div class="flex justify-between items-center border-t pt-6">
+                                            <span class="text-3xl font-bold text-stone-800">₹299</span>
+                                            <button class="text-orange-600 font-bold hover:text-orange-700">SELECT <i
+                                                    class="fas fa-arrow-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tier 2: Premium (Featured) -->
+                                <div
+                                    class="bg-stone-900 rounded-2xl shadow-2xl overflow-hidden border-2 border-orange-500 transform scale-105 relative z-10">
+                                    <div
+                                        class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-b shadow-md">
+                                        MOST POPULAR</div>
+                                    <div class="h-48 overflow-hidden relative">
+                                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop"
+                                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                            alt="Premium Pizza">
+                                    </div>
+                                    <div class="p-8">
+                                        <h3 class="text-2xl font-bold mb-2 text-white">The Artisan</h3>
+                                        <p class="text-stone-400 text-sm mb-6">Our signature experience.</p>
+                                        <ul class="space-y-3 mb-8 text-stone-300">
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-star text-orange-500 mr-2"></i> 12" Sourdough
+                                                Base</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-star text-orange-500 mr-2"></i> Gourmet
+                                                Toppings</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-star text-orange-500 mr-2"></i> House-made
+                                                Dip</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-star text-orange-500 mr-2"></i> Premium
+                                                Cheese Blend</li>
+                                        </ul>
+                                        <div class="flex justify-between items-center border-t border-stone-700 pt-6">
+                                            <span class="text-3xl font-bold text-white">₹549</span>
+                                            <button
+                                                class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-bold transition">ORDER</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tier 3: Luxury -->
+                                <div
+                                    class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
+                                    <div class="h-48 overflow-hidden relative">
+                                        <div
+                                            class="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 m-4 rounded z-10">
+                                            GOURMET</div>
+                                        <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=800&auto=format&fit=crop"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                            alt="Luxury Pizza">
+                                    </div>
+                                    <div class="p-8">
+                                        <h3 class="text-2xl font-bold mb-2">The Royal Feast</h3>
+                                        <p class="text-stone-500 text-sm mb-6">For the true connoisseur.</p>
+                                        <ul class="space-y-3 mb-8 text-stone-600">
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> 14" Family
+                                                Size</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> Unlimited
+                                                Toppings</li>
+                                            <li class="flex items-center"><i
+                                                    class="fas fa-check text-green-500 mr-2"></i> Truffle Oil
+                                                Finish</li>
+                                        </ul>
+                                        <div class="flex justify-between items-center border-t pt-6">
+                                            <span class="text-3xl font-bold text-stone-800">₹899</span>
+                                            <button class="text-orange-600 font-bold hover:text-orange-700">SELECT <i
+                                                    class="fas fa-arrow-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gemini AI Concierge Section -->
+                    <section
+                        class="py-20 bg-stone-900 relative overflow-hidden text-white border-y-8 border-orange-600">
+                        <div class="absolute inset-0 z-0 opacity-10"
+                            style="background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');">
+                        </div>
+
+                        <div class="container mx-auto px-6 relative z-10">
+                            <div class="text-center mb-12">
+                                <span class="text-orange-500 font-bold tracking-widest text-sm uppercase">Powered by
+                                    AI</span>
+                                <h2 class="text-4xl md:text-5xl font-bold serif mt-2">Chef's AI Concierge</h2>
+                                <p class="text-stone-400 mt-4 max-w-xl mx-auto">Not sure what to order? Let our virtual
+                                    assistant help
+                                    you pair flavors or plan your party feast.</p>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
+                                <!-- Flavor Alchemist -->
+                                <div
+                                    class="bg-stone-800/80 backdrop-blur-sm p-8 rounded-2xl border border-stone-700 shadow-2xl flex flex-col h-full">
+                                    <div class="flex items-center mb-6">
+                                        <div
+                                            class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-magic text-xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold serif">The Flavor Alchemist</h3>
+                                    </div>
+                                    <p class="text-stone-400 mb-6 text-sm">Tell us your mood (e.g., "spicy", "comfort
+                                        food", "healthy")
+                                        and we'll suggest the perfect Artisan pizza.</p>
+
+                                    <textarea id="flavorInput" rows="3"
+                                        class="w-full bg-stone-900 border border-stone-600 rounded-lg p-4 text-white focus:outline-none focus:border-orange-500 transition mb-4 resize-none"
+                                        placeholder="I'm feeling like something cheesy and spicy today..."></textarea>
+
+                                    <button onclick="getFlavorRecommendation()"
+                                        class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition shadow-lg flex items-center justify-center group">
+                                        <i class="fas fa-sparkles mr-2 group-hover:animate-spin"></i> Consult the Chef ✨
+                                    </button>
+
+                                    <!-- Result Area -->
+                                    <div id="flavorLoading" class="hidden flex justify-center py-6">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <div id="flavorOutput"
+                                        class="hidden mt-6 bg-stone-700/50 p-4 rounded-lg border-l-4 border-orange-500 text-stone-200 text-sm italic leading-relaxed animate-fade-in">
+                                    </div>
+                                </div>
+
+                                <!-- Smart Party Planner -->
+                                <div
+                                    class="bg-stone-800/80 backdrop-blur-sm p-8 rounded-2xl border border-stone-700 shadow-2xl flex flex-col h-full">
+                                    <div class="flex items-center mb-6">
+                                        <div
+                                            class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-calculator text-xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold serif">Smart Feast Planner</h3>
+                                    </div>
+                                    <p class="text-stone-400 mb-6 text-sm">Planning an event at Infopark? Enter your
+                                        guest count and
+                                        vibe, and we'll calculate the perfect order.</p>
+
+                                    <div class="grid grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="text-xs text-stone-500 uppercase font-bold">Guests</label>
+                                            <input id="guestCount" type="number" min="1"
+                                                class="w-full bg-stone-900 border border-stone-600 rounded-lg p-3 text-white focus:outline-none focus:border-purple-500 transition mt-1"
+                                                placeholder="10">
+                                        </div>
+                                        <div>
+                                            <label class="text-xs text-stone-500 uppercase font-bold">Occasion</label>
+                                            <input id="partyVibe" type="text"
+                                                class="w-full bg-stone-900 border border-stone-600 rounded-lg p-3 text-white focus:outline-none focus:border-purple-500 transition mt-1"
+                                                placeholder="Team Lunch">
+                                        </div>
+                                    </div>
+
+                                    <button onclick="getPartyPlan()"
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-lg transition shadow-lg flex items-center justify-center group">
+                                        <i class="fas fa-file-invoice mr-2"></i> Plan My Feast ✨
+                                    </button>
+
+                                    <!-- Result Area -->
+                                    <div id="partyLoading" class="hidden flex justify-center py-6">
+                                        <div class="loader border-t-purple-500"></div>
+                                    </div>
+                                    <div id="partyOutput"
+                                        class="hidden mt-6 bg-stone-700/50 p-4 rounded-lg border-l-4 border-purple-500 text-stone-200 text-sm leading-relaxed animate-fade-in">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Visual Offer Strip -->
+                    <section class="py-12 bg-orange-600 text-white">
+                        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+                            <div class="flex items-center mb-6 md:mb-0">
+                                <i class="fas fa-motorcycle text-5xl mr-6"></i>
+                                <div>
+                                    <h3 class="text-2xl font-bold">Free Delivery to Infopark</h3>
+                                    <p class="text-orange-100">On all orders above ₹499. Within 30 mins.</p>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold shadow-lg hover:bg-stone-100 transition">
+                                Check Delivery Zone
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+                        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+                            <div class="col-span-1 md:col-span-2">
+                                <h4 class="text-white text-2xl font-bold serif mb-4">PHILOS DELICACY</h4>
+                                <p class="mb-6 max-w-sm">Bringing authentic Italian flavors to the heart of Kakkanad.
+                                    Experience the
+                                    crunch of wood-fired perfection.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Location</h5>
+                                <p>Near Infopark Phase 1</p>
+                                <p>Kakkanad, Kochi</p>
+                                <p>Kerala, 682030</p>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Opening Hours
+                                </h5>
+                                <p>Mon - Fri: 11am - 11pm</p>
+                                <p>Sat - Sun: 11am - 12am</p>
+                                <p class="text-orange-500 mt-2 font-bold">Happy Hour: 4pm - 7pm</p>
+                            </div>
+                        </div>
+                        <div class="text-center mt-12 pt-8 border-t border-stone-800 text-sm">
+                            &copy; 2024 Philos Delicacy. All rights reserved.
+                        </div>
+                    </footer>
+
+                    <!-- Order Modal -->
+                    <div id="orderModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title"
+                        role="dialog" aria-modal="true">
+                        <div
+                            class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                            <!-- Background overlay -->
+                            <div class="fixed inset-0 bg-stone-900/90 transition-opacity" aria-hidden="true"
+                                onclick="closeOrderModal()"></div>
+
+                            <!-- Modal panel -->
+                            <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
+                                aria-hidden="true">&#8203;</span>
+                            <div
+                                class="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                    <div class="sm:flex sm:items-start">
+                                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                                            <h3 class="text-2xl leading-6 font-bold text-stone-900 serif mb-2"
+                                                id="modal-title">Order Your Cravings</h3>
+                                            <p class="text-sm text-stone-500 mb-6">Select your preferred delivery
+                                                partner.</p>
+
+                                            <div class="space-y-4">
+                                                <!-- Zomato -->
+                                                <a href="https://www.zomato.com/kochi/philos-delicacy-kakkanad/order"
+                                                    target="_blank"
+                                                    class="flex items-center justify-between p-4 border-2 border-stone-100 rounded-xl hover:border-red-500 hover:bg-red-50 transition group">
+                                                    <div class="flex items-center">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
+                                                            <span class="font-bold text-lg">Z</span>
+                                                        </div>
+                                                        <div>
+                                                            <div
+                                                                class="font-bold text-stone-800 group-hover:text-red-600">
+                                                                Zomato</div>
+                                                            <div class="text-xs text-stone-500">Fast delivery across
+                                                                Kochi</div>
+                                                        </div>
+                                                    </div>
+                                                    <i
+                                                        class="fas fa-external-link-alt text-stone-400 group-hover:text-red-500"></i>
+                                                </a>
+
+                                                <!-- Swiggy -->
+                                                <a href="https://www.swiggy.com" target="_blank"
+                                                    class="flex items-center justify-between p-4 border-2 border-stone-100 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition group">
+                                                    <div class="flex items-center">
+                                                        <div
+                                                            class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mr-4">
+                                                            <span class="font-bold text-lg">S</span>
+                                                        </div>
+                                                        <div>
+                                                            <div
+                                                                class="font-bold text-stone-800 group-hover:text-orange-600">
+                                                                Swiggy</div>
+                                                            <div class="text-xs text-stone-500">Live order tracking
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <i
+                                                        class="fas fa-external-link-alt text-stone-400 group-hover:text-orange-500"></i>
+                                                </a>
+
+                                                <!-- Direct -->
+                                                <a href="#"
+                                                    class="flex items-center justify-between p-4 border-2 border-stone-800 rounded-xl bg-stone-900 hover:bg-stone-800 transition group shadow-lg">
+                                                    <div class="flex items-center">
+                                                        <div
+                                                            class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white mr-4">
+                                                            <i class="fas fa-store"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-bold text-white">Philos Direct</div>
+                                                            <div class="text-xs text-orange-400 font-semibold"><i
+                                                                    class="fas fa-map-marker-alt mr-1"></i> Delivery
+                                                                within 2km</div>
+                                                        </div>
+                                                    </div>
+                                                    <i class="fas fa-arrow-right text-white"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-stone-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <button type="button"
+                                        class="mt-3 w-full inline-flex justify-center rounded-md border border-stone-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-stone-700 hover:bg-stone-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                        onclick="closeOrderModal()">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Tier 2: Premium (Featured) -->
-                <div class="bg-stone-900 rounded-2xl shadow-2xl overflow-hidden border-2 border-orange-500 transform scale-105 relative z-10">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-b shadow-md">MOST POPULAR</div>
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Premium Pizza">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2 text-white">The Artisan</h3>
-                        <p class="text-stone-400 text-sm mb-6">Our signature experience.</p>
-                        <ul class="space-y-3 mb-8 text-stone-300">
-                            <li class="flex items-center"><i class="fas fa-star text-orange-500 mr-2"></i> 12" Sourdough Base</li>
-                            <li class="flex items-center"><i class="fas fa-star text-orange-500 mr-2"></i> Gourmet Toppings</li>
-                            <li class="flex items-center"><i class="fas fa-star text-orange-500 mr-2"></i> House-made Dip</li>
-                            <li class="flex items-center"><i class="fas fa-star text-orange-500 mr-2"></i> Premium Cheese Blend</li>
-                        </ul>
-                        <div class="flex justify-between items-center border-t border-stone-700 pt-6">
-                            <span class="text-3xl font-bold text-white">₹549</span>
-                            <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-bold transition">ORDER</button>
-                        </div>
-                    </div>
-                </div>
+                    loadingElement.classList.remove('hidden');
 
-                <!-- Tier 3: Luxury -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 m-4 rounded z-10">GOURMET</div>
-                        <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Luxury Pizza">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">The Royal Feast</h3>
-                        <p class="text-stone-500 text-sm mb-6">For the true connoisseur.</p>
-                        <ul class="space-y-3 mb-8 text-stone-600">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 14" Family Size</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Toppings</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Truffle Oil Finish</li>
-                        </ul>
-                        <div class="flex justify-between items-center border-t pt-6">
-                            <span class="text-3xl font-bold text-stone-800">₹899</span>
-                            <button class="text-orange-600 font-bold hover:text-orange-700">SELECT <i class="fas fa-arrow-right ml-1"></i></button>
-                        </div>
-                    </div>
-                </div>
+                    const systemPrompt = "You are a charismatic, Italian artisan pizza chef at Philos Delicacy in
+                    Kakkanad. You are helpful, warm, and brief. Recommend items from a hypothetical high-end pizza
+                    menu.";
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Gemini AI Concierge Section -->
-    <section class="py-20 bg-stone-900 relative overflow-hidden text-white border-y-8 border-orange-600">
-         <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');"></div>
-         
-         <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-12">
-                <span class="text-orange-500 font-bold tracking-widest text-sm uppercase">Powered by AI</span>
-                <h2 class="text-4xl md:text-5xl font-bold serif mt-2">Chef's AI Concierge</h2>
-                <p class="text-stone-400 mt-4 max-w-xl mx-auto">Not sure what to order? Let our virtual assistant help you pair flavors or plan your party feast.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                
-                <!-- Flavor Alchemist -->
-                <div class="bg-stone-800/80 backdrop-blur-sm p-8 rounded-2xl border border-stone-700 shadow-2xl flex flex-col h-full">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-magic text-xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold serif">The Flavor Alchemist</h3>
-                    </div>
-                    <p class="text-stone-400 mb-6 text-sm">Tell us your mood (e.g., "spicy", "comfort food", "healthy") and we'll suggest the perfect Artisan pizza.</p>
-                    
-                    <textarea id="flavorInput" rows="3" class="w-full bg-stone-900 border border-stone-600 rounded-lg p-4 text-white focus:outline-none focus:border-orange-500 transition mb-4 resize-none" placeholder="I'm feeling like something cheesy and spicy today..."></textarea>
-                    
-                    <button onclick="getFlavorRecommendation()" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition shadow-lg flex items-center justify-center group">
-                        <i class="fas fa-sparkles mr-2 group-hover:animate-spin"></i> Consult the Chef ✨
-                    </button>
-
-                    <!-- Result Area -->
-                    <div id="flavorLoading" class="hidden flex justify-center py-6">
-                        <div class="loader"></div>
-                    </div>
-                    <div id="flavorOutput" class="hidden mt-6 bg-stone-700/50 p-4 rounded-lg border-l-4 border-orange-500 text-stone-200 text-sm italic leading-relaxed animate-fade-in"></div>
-                </div>
-
-                <!-- Smart Party Planner -->
-                <div class="bg-stone-800/80 backdrop-blur-sm p-8 rounded-2xl border border-stone-700 shadow-2xl flex flex-col h-full">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-calculator text-xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold serif">Smart Feast Planner</h3>
-                    </div>
-                    <p class="text-stone-400 mb-6 text-sm">Planning an event at Infopark? Enter your guest count and vibe, and we'll calculate the perfect order.</p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label class="text-xs text-stone-500 uppercase font-bold">Guests</label>
-                            <input id="guestCount" type="number" min="1" class="w-full bg-stone-900 border border-stone-600 rounded-lg p-3 text-white focus:outline-none focus:border-purple-500 transition mt-1" placeholder="10">
-                        </div>
-                        <div>
-                            <label class="text-xs text-stone-500 uppercase font-bold">Occasion</label>
-                            <input id="partyVibe" type="text" class="w-full bg-stone-900 border border-stone-600 rounded-lg p-3 text-white focus:outline-none focus:border-purple-500 transition mt-1" placeholder="Team Lunch">
-                        </div>
-                    </div>
-                    
-                    <button onclick="getPartyPlan()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-lg transition shadow-lg flex items-center justify-center group">
-                        <i class="fas fa-file-invoice mr-2"></i> Plan My Feast ✨
-                    </button>
-
-                    <!-- Result Area -->
-                    <div id="partyLoading" class="hidden flex justify-center py-6">
-                        <div class="loader border-t-purple-500"></div>
-                    </div>
-                    <div id="partyOutput" class="hidden mt-6 bg-stone-700/50 p-4 rounded-lg border-l-4 border-purple-500 text-stone-200 text-sm leading-relaxed animate-fade-in"></div>
-                </div>
-
-            </div>
-         </div>
-    </section>
-
-    <!-- Visual Offer Strip -->
-    <section class="py-12 bg-orange-600 text-white">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center mb-6 md:mb-0">
-                <i class="fas fa-motorcycle text-5xl mr-6"></i>
-                <div>
-                    <h3 class="text-2xl font-bold">Free Delivery to Infopark</h3>
-                    <p class="text-orange-100">On all orders above ₹499. Within 30 mins.</p>
-                </div>
-            </div>
-            <button class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold shadow-lg hover:bg-stone-100 transition">
-                Check Delivery Zone
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
-        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
-            <div class="col-span-1 md:col-span-2">
-                <h4 class="text-white text-2xl font-bold serif mb-4">PHILOS DELICACY</h4>
-                <p class="mb-6 max-w-sm">Bringing authentic Italian flavors to the heart of Kakkanad. Experience the crunch of wood-fired perfection.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div>
-                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Location</h5>
-                <p>Near Infopark Phase 1</p>
-                <p>Kakkanad, Kochi</p>
-                <p>Kerala, 682030</p>
-            </div>
-            <div>
-                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Opening Hours</h5>
-                <p>Mon - Fri: 11am - 11pm</p>
-                <p>Sat - Sun: 11am - 12am</p>
-                <p class="text-orange-500 mt-2 font-bold">Happy Hour: 4pm - 7pm</p>
-            </div>
-        </div>
-        <div class="text-center mt-12 pt-8 border-t border-stone-800 text-sm">
-            &copy; 2024 Philos Delicacy. All rights reserved.
-        </div>
-    </footer>
-
-    <!-- Gemini AI Script -->
-    <script>
-        const apiKey = ""; // Provided by environment
-
-        async function callGemini(prompt, outputId, loadingId) {
-            const outputElement = document.getElementById(outputId);
-            const loadingElement = document.getElementById(loadingId);
-            
-            // UI Reset
-            outputElement.classList.add('hidden');
-            loadingElement.classList.remove('hidden');
-
-            const systemPrompt = "You are a charismatic, Italian artisan pizza chef at Philos Delicacy in Kakkanad. You are helpful, warm, and brief. Recommend items from a hypothetical high-end pizza menu.";
-
-            try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    try {
+                    const response = await
+                    fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
+                    {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        contents: [{ parts: [{ text: prompt }] }],
-                        systemInstruction: { parts: [{ text: systemPrompt }] }
+                    contents: [{ parts: [{ text: prompt }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] }
                     })
-                });
+                    });
 
-                if (!response.ok) throw new Error('API Error');
-                const data = await response.json();
-                const text = data.candidates[0].content.parts[0].text;
+                    if (!response.ok) throw new Error('API Error');
+                    const data = await response.json();
+                    const text = data.candidates[0].content.parts[0].text;
 
-                // UI Success
-                loadingElement.classList.add('hidden');
-                // Basic formatting for bold text
-                outputElement.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>').replace(/\n/g, '<br>');
-                outputElement.classList.remove('hidden');
+                    // UI Success
+                    loadingElement.classList.add('hidden');
+                    // Basic formatting for bold text
+                    outputElement.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong
+                        class="text-white">$1</strong>').replace(/\n/g, '<br>');
+                    outputElement.classList.remove('hidden');
 
-            } catch (error) {
-                console.error(error);
-                loadingElement.classList.add('hidden');
-                outputElement.textContent = "Mamma mia! The chef is too busy right now. Please try again in a moment.";
-                outputElement.classList.remove('hidden');
-            }
-        }
+                    } catch (error) {
+                    console.error(error);
+                    loadingElement.classList.add('hidden');
+                    outputElement.textContent = "Mamma mia! The chef is too busy right now. Please try again in a
+                    moment.";
+                    outputElement.classList.remove('hidden');
+                    }
+                    }
 
-        function getFlavorRecommendation() {
-            const flavor = document.getElementById('flavorInput').value;
-            if(!flavor) return;
-            const prompt = `The customer feels: "${flavor}". Recommend one specific artisan pizza type (e.g., Truffle Mushroom, Spicy Pepperoni, Margherita Basil) and a drink pairing. Describe the taste briefly.`;
-            callGemini(prompt, 'flavorOutput', 'flavorLoading');
-        }
+                    function getFlavorRecommendation() {
+                    const flavor = document.getElementById('flavorInput').value;
+                    if (!flavor) return;
+                    const prompt = `The customer feels: "${flavor}". Recommend one specific artisan pizza type (e.g.,
+                    Truffle Mushroom, Spicy Pepperoni, Margherita Basil) and a drink pairing. Describe the taste
+                    briefly.`;
+                    callGemini(prompt, 'flavorOutput', 'flavorLoading');
+                    }
 
-        function getPartyPlan() {
-            const count = document.getElementById('guestCount').value;
-            const vibe = document.getElementById('partyVibe').value;
-            if(!count) return;
-            const prompt = `Plan a catering order for ${count} people. The occasion is: "${vibe}". Suggest how many Large Pizzas, Sides (Garlic Bread/Wings), and Drinks they should order to ensure everyone is full but not wasteful. Format as a simple list.`;
-            callGemini(prompt, 'partyOutput', 'partyLoading');
-        }
-    </script>
+                    function getPartyPlan() {
+                    const count = document.getElementById('guestCount').value;
+                    const vibe = document.getElementById('partyVibe').value;
+                    if (!count) return;
+                    const prompt = `Plan a catering order for ${count} people. The occasion is: "${vibe}". Suggest how
+                    many Large Pizzas, Sides (Garlic Bread/Wings), and Drinks they should order to ensure everyone is
+                    full but not wasteful. Format as a simple list.`;
+                    callGemini(prompt, 'partyOutput', 'partyLoading');
+                    }
+                    </script>
 
-</body>
-</html>
+                </body>
+
+                </html>
